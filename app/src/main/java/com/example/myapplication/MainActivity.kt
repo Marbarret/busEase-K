@@ -12,24 +12,10 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var username: EditText
-    lateinit var password: EditText
-    lateinit var  loginBtn: Button
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        username = findViewById(R.id.username_input)
-        password = findViewById(R.id.pass_input)
-        loginBtn = findViewById(R.id.login_btn)
-
-        loginBtn.setOnClickListener {
-            val user = username.text.toString()
-            val pass = password.text.toString()
-
-            Log.i("Test Credentials", "Username: $user and Password: $pass")
-        }
     }
 }

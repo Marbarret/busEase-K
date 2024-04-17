@@ -19,51 +19,22 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:src="@drawable/baseline_account_circle_24"
+            android:src="@drawable/google_logo"
         />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:background="@drawable/rounded_corner"
-            android:padding="18dp"
-            android:layout_marginTop="32dp"
-            android:inputType="text"
-            android:id="@+id/username.input"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:background="@drawable/rounded_corner"
-            android:padding="18dp"
-            android:layout_marginTop="16dp"
-            android:inputType="textPassword"
-            android:id="@+id/pass.input"
-            />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Sign in with Google"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
             android:padding="18dp"
             android:layout_marginTop="32dp"
             android:textSize="20sp"
             android:id="@+id/login_btn"
+            android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
             />
 
-
     </LinearLayout>
-
 
 </RelativeLayout>
