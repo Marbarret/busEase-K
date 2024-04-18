@@ -14,25 +14,64 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:src="@drawable/google_logo"
-        />
+            android:contentDescription="@string/todo" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:textColor="@color/black"
+            android:id="@+id/txtEmail"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:layout_marginTop="32dp"
+            android:inputType="text"
+            tools:ignore="TextFields"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:textColor="@color/black"
+            android:id="@+id/txtPassword"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp"
+            android:layout_marginTop="14dp"
+            android:inputType="textPassword"
+            android:autofillHints="" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign in with Google"
+            android:text="@string/sign_in"
+            android:backgroundTint="#3F51B5"
+            android:textColor="@color/white"
+            android:padding="18dp"
+            android:layout_marginTop="32dp"
+            android:textSize="20sp"
+            android:id="@+id/login_btn"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_with_google"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
             android:padding="18dp"
             android:layout_marginTop="32dp"
             android:textSize="20sp"
-            android:id="@+id/login_btn"
-            android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+            android:id="@+id/btnSignInGoogle"
             />
 
     </LinearLayout>
