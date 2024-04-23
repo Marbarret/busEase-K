@@ -11,4 +11,5 @@
     <string name="fragmento_b">Fragment B</string>
     <string name="fragmento_c">Fragment C</string>
     <string name="logout">Logout</string>
+    <string name="default_web_client_id" translatable="false">AIzaSyDWK7beKLQT_7xELadwUKiPNaLNYfcLSxI</string>
 </resources>
