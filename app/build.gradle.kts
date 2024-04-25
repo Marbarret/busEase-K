@@ -4,11 +4,12 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+//    id("kotlin-android-extensions")
 }
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 29
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myapplication"

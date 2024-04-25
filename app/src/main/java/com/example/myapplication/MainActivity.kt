@@ -2,13 +2,10 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material3.Button
-import com.google.firebase.auth.FirebaseAuth
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -16,6 +13,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 
@@ -37,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         signInTextField()
 
+        createAccount()
         createRequest()
 
         binding.btnSignInGoogle.setOnClickListener {
@@ -58,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         nGoogleSignInClient = GoogleSignIn.getClient(this, gSignIn)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == nSignIn) {
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                     firebaseAuthWithGoogle(account)
                 }
             } catch (a: ApiException) {
-                Toast.makeText(baseContext, a.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "${a.message} Erro aqui", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -85,8 +85,14 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Sorry, login Failure", Toast.LENGTH_SHORT)
                         .show()
                 }
-
             }
+    }
+
+    fun createAccount() {
+        binding.btnCreateAccount.setOnClickListener {
+            val intent = Intent(applicationContext, CreateAccount::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun signInTextField() {
