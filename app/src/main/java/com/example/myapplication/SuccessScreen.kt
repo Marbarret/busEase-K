@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,11 @@ class SuccessScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySuccessScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.backLogin.setOnClickListener {
+            val intentMain = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intentMain)
+        }
 
     }
 }

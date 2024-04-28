@@ -35,11 +35,10 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         signInTextField()
 
-        createAccount()
+        goToCreateAccountView()
         createRequest()
 
         binding.btnSignInGoogle.setOnClickListener {
-            signIn()
         }
     }
 
@@ -88,11 +87,14 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    fun createAccount() {
-        binding.btnCreateAccount.setOnClickListener {
-            val intent = Intent(applicationContext, CreateAccount::class.java)
-            startActivity(intent)
-        }
+    private fun goToCreateAccountView() {
+
+//        binding.btnCreateAccount.setOnClickListener {
+            startActivity(Intent(this, CreateAccount::class.java))
+//            val intent = Intent(applicationContext, CreateAccount::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
     }
 
     private fun signInTextField() {

@@ -13,4 +13,6 @@
     <string name="logout">Logout</string>
     <string name="default_web_client_id" translatable="false">AIzaSyDWK7beKLQT_7xELadwUKiPNaLNYfcLSxI</string>
     <string name="create_account">Create Account</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="success_comeback_to_login_view">Success! Comeback to Login View</string>
 </resources>
